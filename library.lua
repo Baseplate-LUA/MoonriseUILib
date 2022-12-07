@@ -80,7 +80,7 @@ finity.themes = {
 		notification_success = Color3.fromRGB(139, 217, 45),
 		notification_info = Color3.fromRGB(206, 206, 206),
 
-		NotifSound = "FinityGUI/assets/NotifSound.wav",
+		NotifSound = "MoonriseUI/assets/NotifSound.wav",
 
 	},
 
@@ -125,7 +125,7 @@ finity.themes = {
 		notification_success = Color3.fromRGB(139, 217, 45),
 		notification_info = Color3.fromRGB(206, 206, 206),
 
-		NotifSound = "FinityGUI/assets/NotifSound.wav",
+		NotifSound = "MoonriseUI/assets/NotifSound.wav",
 
 	}
 }
@@ -274,7 +274,7 @@ local suc, err = pcall(function()
 				BackgroundTransparency = 1,
 				Position = UDim2.new(0.5, 0, 0.5, 4),
 				Size = UDim2.new(1, 6, 1, 6),
-				Image = GetAssetFunc("FinityGUI/assets/WindowBlur.png"),
+				Image = GetAssetFunc("MoonriseUI/assets/WindowBlur.png"),
 				ImageTransparency = transparency and true or 0.5,
 				ImageColor3 = Color3.fromRGB(35, 35, 35),
 				ScaleType = Enum.ScaleType.Slice,
@@ -597,7 +597,7 @@ local suc, err = pcall(function()
 				frame2.Position = UDim2.new(0, 3, 1, -3)
 				frame2.ZIndex = 2
 				frame2.Active = true
-				frame2.Image = GetAssetFunc("FinityGUI/assets/NotificationBar.png")
+				frame2.Image = GetAssetFunc("MoonriseUI/assets/NotificationBar.png")
 				frame2.BorderSizePixel = 0
 				frame2.Parent = container
 		
@@ -609,7 +609,7 @@ local suc, err = pcall(function()
 		
 					local icon = Instance.new("ImageLabel")
 					icon.Name = "AlertIcon"
-					icon.Image = GetAssetFunc('FinityGUI/assets/WarningNotification.png')
+					icon.Image = GetAssetFunc('MoonriseUI/assets/WarningNotification.png')
 					icon.BackgroundTransparency = 1
 					icon.BorderSizePixel = 0
 					icon.Position = UDim2.new(0, -17, 0, -6)
@@ -620,7 +620,7 @@ local suc, err = pcall(function()
 		
 					local icon = Instance.new("ImageLabel")
 					icon.Name = "AlertIcon"
-					icon.Image = GetAssetFunc('FinityGUI/assets/InfoNotification.png')
+					icon.Image = GetAssetFunc('MoonriseUI/assets/InfoNotification.png')
 					icon.BackgroundTransparency = 1
 					icon.BorderSizePixel = 0
 					icon.Position = UDim2.new(0, -17, 0, -6)
@@ -631,7 +631,7 @@ local suc, err = pcall(function()
 		
 					local icon = Instance.new("ImageLabel")
 					icon.Name = "AlertIcon"
-					icon.Image = GetAssetFunc('FinityGUI/assets/Success.png')
+					icon.Image = GetAssetFunc('MoonriseUI/assets/Success.png')
 					icon.BackgroundTransparency = 1
 					icon.BorderSizePixel = 0
 					icon.Position = UDim2.new(0, 7, 0, 14) -- the image is much bigger than others idk why
@@ -771,9 +771,9 @@ local suc, err = pcall(function()
 					ZIndex = 2,
 					CanvasSize = UDim2.new(0, 0, 0, 0),
 					ScrollBarImageColor3 = theme.scrollbar_color or Color3.fromRGB(118, 118, 121),
-					BottomImage = GetAssetFunc("FinityGUI/assets/ScrollBar.png"),
-					MidImage = GetAssetFunc("FinityGUI/assets/ScrollBar.png"),
-					TopImage = GetAssetFunc("FinityGUI/assets/ScrollBar.png"),
+					BottomImage = GetAssetFunc("MoonriseUI/assets/ScrollBar.png"),
+					MidImage = GetAssetFunc("MoonriseUI/assets/ScrollBar.png"),
+					TopImage = GetAssetFunc("MoonriseUI/assets/ScrollBar.png"),
 					ScrollBarImageTransparency = 1 --
 				})
 
@@ -1009,7 +1009,7 @@ local suc, err = pcall(function()
 									Position = UDim2.new(1, 0, 0.5, 0),
 									Size = UDim2.new(0, 20, 0, 20),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatBackground.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatBackground.png"),
 									ImageColor3 = theme.checkbox_outer,
 									ScaleType = Enum.ScaleType.Slice,
 									SliceCenter = Rect.new(100, 100, 100, 100),
@@ -1024,7 +1024,7 @@ local suc, err = pcall(function()
 									Position = UDim2.new(0.5, 0, 0.5, 0),
 									Size = UDim2.new(0, 14, 0, 14),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatBoxStuff.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatBoxStuff.png"),
 									ImageColor3 = theme.checkbox_inner,
 									ScaleType = Enum.ScaleType.Slice,
 									SliceCenter = Rect.new(100, 100, 100, 100),
@@ -1091,8 +1091,8 @@ local suc, err = pcall(function()
 									end
 								end
 
-								local hsvimage = GetAssetFunc("FinityGUI/assets/HSVBar.png")
-								local lumienceimage = GetAssetFunc("FinityGUI/assets/lumienceimage.png")
+								local hsvimage = GetAssetFunc("MoonriseUI/assets/HSVBar.png")
+								local lumienceimage = GetAssetFunc("MoonriseUI/assets/lumienceimage.png")
 
 								cheat.hsvbar = finity:Create("ImageButton", {
 									AnchorPoint = Vector2.new(0.5, 0.5),
@@ -1113,7 +1113,7 @@ local suc, err = pcall(function()
 									Position = UDim2.new(0.5, 0, 0.5, -6),
 									Size = UDim2.new(0, 6, 0, 6),
 									ZIndex = 3,
-									Image = GetAssetFunc("FinityGUI/assets/Arrow.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/Arrow.png"),
 									Rotation = -90
 								})
 
@@ -1235,7 +1235,7 @@ local suc, err = pcall(function()
 									BackgroundTransparency = 1,
 									Size = UDim2.new(1, 0, 1, 0),
 									ZIndex = 3,
-									Image = GetAssetFunc("FinityGUI/assets/DropDown.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/DropDown.png"),
 									ImageColor3 = theme.dropdown_background,
 									ImageTransparency = 0.5,
 									ScaleType = Enum.ScaleType.Slice,
@@ -1265,9 +1265,9 @@ local suc, err = pcall(function()
 									Position = UDim2.new(0, 0, 1, 0),
 									Size = UDim2.new(1, 0, 0, 100),
 									ZIndex = 3,
-									BottomImage = GetAssetFunc("FinityGUI/assets/CheatList.png"),
-									MidImage = GetAssetFunc("FinityGUI/assets/CheatList.png"),
-									TopImage = GetAssetFunc("FinityGUI/assets/CheatList.png"),
+									BottomImage = GetAssetFunc("MoonriseUI/assets/CheatList.png"),
+									MidImage = GetAssetFunc("MoonriseUI/assets/CheatList.png"),
+									TopImage = GetAssetFunc("MoonriseUI/assets/CheatList.png"),
 									ScrollBarThickness = theme.dropdown_scrollbar_thickness,
 									VerticalScrollBarInset = Enum.ScrollBarInset.None,
 									ScrollBarImageColor3 = theme.dropdown_scrollbar_color
@@ -1437,7 +1437,7 @@ local suc, err = pcall(function()
 									BackgroundTransparency = 1,
 									Size = UDim2.new(1, 0, 1, 0),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatBackground.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatBackground.png"),
 									ImageColor3 = theme.textbox_background,
 									ImageTransparency = 0.5,
 									ScaleType = Enum.ScaleType.Slice,
@@ -1515,7 +1515,7 @@ local suc, err = pcall(function()
 									Position = UDim2.new(1, 0, 0.5, 0),
 									Size = UDim2.new(1, 0, 0, 6),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatSliderbar.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatSliderbar.png"),
 									ImageColor3 = theme.slider_background,
 									ImageTransparency = 0.5,
 									ScaleType = Enum.ScaleType.Slice,
@@ -1545,7 +1545,7 @@ local suc, err = pcall(function()
 									BackgroundTransparency = 1,
 									Size = UDim2.new(0.5, 0, 1, 0),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatVisiFrame.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatVisiFrame.png"),
 									ImageColor3 = theme.slider_color,
 									ScaleType = Enum.ScaleType.Slice,
 									SliceCenter = Rect.new(100, 100, 100, 100),
@@ -1694,7 +1694,7 @@ local suc, err = pcall(function()
 									BackgroundTransparency = 1,
 									Size = UDim2.new(1, 0, 1, 0),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatBackground.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatBackground.png"),
 									ImageColor3 = theme.button_background,
 									ImageTransparency = 0.5,
 									ScaleType = Enum.ScaleType.Slice,
@@ -1761,7 +1761,7 @@ local suc, err = pcall(function()
 									BackgroundTransparency = 1,
 									Size = UDim2.new(1, 0, 1, 0),
 									ZIndex = 2,
-									Image = GetAssetFunc("FinityGUI/assets/CheatBackground.png"),
+									Image = GetAssetFunc("MoonriseUI/assets/CheatBackground.png"),
 									ImageColor3 = theme.button_background,
 									ImageTransparency = 0.5,
 									ScaleType = Enum.ScaleType.Slice,

@@ -132,29 +132,28 @@ finity.themes = {
 
 -- Here we will make the folders needed by finity which will store data/assets.
 local DFAA = function()
-	makefolder('FinityGUI')
-	makefolder('FinityGUI/assets')
-	makefolder('FinityGUI/assets/custom') -- stores third part assets
-	writefile('FinityGUI/FinityDosAndDonts.txt', game:HttpGet("https://github.com/LocalSmail/Finity/raw/main/things/DosAndDont"))
+	makefolder('MoonriseUI')
+	makefolder('MoonriseUI/assets')
+	makefolder('MoonriseUI/assets/custom') -- stores third part assets
 
 	-- a template for the support that is to come
 
-	if isfile('FinityGUI/Customthemes.lua') then
+	if isfile('MoonriseUI/Customthemes.lua') then
 		if debug then
 			print('CustomThemes file exists.')
 		end
-	elseif not isfile('FinityGUI/Customthemes.lua') then
-		writefile('FinityGUI/Customthemes.lua', game:HttpGet("https://raw.githubusercontent.com/LocalSmail/Finity/main/CustomThemeTemplate.lua"))
+	elseif not isfile('MoonriseUI/Customthemes.lua') then
+		writefile('MoonriseUI/Customthemes.lua', game:HttpGet("https://raw.githubusercontent.com/LocalSmail/Finity/main/CustomThemeTemplate.lua"))
 	end
 
 	for i, v in Asset_Names do
-		writefile('FinityGUI/assets/'..v, game:HttpGet("https://raw.githubusercontent.com/LocalSmail/Finity/main/assets/"..v))
+		writefile('MoonriseUI/assets/'..v, game:HttpGet("https://raw.githubusercontent.com/Baseplate-LUA/MoonriseUILib/main/assets/"..v))
 	end
 
 end
 
-if not isfolder('FinityGUI') then
-	print('Creating FinityGUI folders in workspace.')
+if not isfolder('MoonriseUI') then
+	print('Creating MoonriseUI folders in workspace.')
 	DFAA()
 end
 
@@ -162,17 +161,17 @@ function finity:DownloadCustomAsset(link: string, AssetName: string, IsCustomThe
 	print("Downloading custom asset from: "..link)
 
 	if not IsCustomThemeFile then
-		writefile('FinityGUI/assets/custom/'..AssetName, game:HttpGet(link))
+		writefile('MoonriseUI/assets/custom/'..AssetName, game:HttpGet(link))
 
 	elseif IsCustomThemeFile and AssetName == nil or AssetName == "" or AssetName == " " then
 		print("Downloading custom Customtheme.lua file")
-		writefile('FinityGUI/Customthemes.lua', game:HttpGet(link))
+		writefile('MoonriseUI/Customthemes.lua', game:HttpGet(link))
 
 		-- Same as the function above just checks if the AssetName has a value just incase a random shitty error gets thrown
 	elseif IsCustomThemeFile and not AssetName == nil or not AssetName == "" or not AssetName == " " then
 		print("Downloading custom Customtheme.lua file.")
 		warn("Tip: You dont have to put anything inside the AssetName argument, We parse the file name by default!")
-		writefile('FinityGUI/Customthemes.lua', game:HttpGet(link))
+		writefile('MoonriseUI/Customthemes.lua', game:HttpGet(link))
 
 	end
 end
@@ -202,7 +201,7 @@ setmetatable(finity.gs, {
 })
 
 function finity:ImportCustomThemes(Theme_Name)
-	local CustomthemeScript = loadfile("FinityGUI/Customthemes.lua")()
+	local CustomthemeScript = loadfile("MoonriseUI/Customthemes.lua")()
 
 	local themes = CustomthemeScript.CustomThemes
 
